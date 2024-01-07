@@ -6,7 +6,7 @@ ENV TZ=Etc/UTC
 RUN <<EOF
 apt-get update
 apt-get upgrade -y
-apt-get install -y --no-install-recommends git openssh-server
+apt-get install -y --no-install-recommends ca-certificates git openssh-server
 rm -rf /var/lib/apt/lists/*
 mkdir /var/run/sshd
 git init --bare /project.git
